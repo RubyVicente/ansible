@@ -45,4 +45,20 @@ resource "aws_security_group" "instance" {
       to_port = 22
     },
 ]
+ ingress = [
+    {
+      cidr_blocks = [
+        "23.23.73.1/32",
+        "172.31.16.120/32",
+        ]
+      description = ""
+      from_port = 80
+      ipv6_cidr_blocks = []
+      prefix_list_ids = []
+      protocol = "tcp"
+      security_groups = []
+      self = false
+      to_port = 22
+    },
+]
 }

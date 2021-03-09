@@ -44,8 +44,6 @@ resource "aws_security_group" "instance" {
       self = false
       to_port = 22
     },
-]
- ingress = [
     {
       cidr_blocks = [
         "23.23.73.1/32",
@@ -58,7 +56,7 @@ resource "aws_security_group" "instance" {
       protocol = "tcp"
       security_groups = []
       self = false
-      to_port = 22
+      to_port = 80
     },
 ]
 }

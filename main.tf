@@ -34,6 +34,7 @@ resource "aws_security_group" "instance" {
       cidr_blocks = [
         "23.23.73.1/32",
         "172.31.16.120/32",
+        "83.240.158.54/32",
         ]
       description = ""
       from_port = 22
@@ -48,6 +49,7 @@ resource "aws_security_group" "instance" {
       cidr_blocks = [
         "23.23.73.1/32",
         "172.31.16.120/32",
+        "83.240.158.54/32",
         ]
       description = ""
       from_port = 80
@@ -57,6 +59,36 @@ resource "aws_security_group" "instance" {
       security_groups = []
       self = false
       to_port = 80
+    },
+    {
+      cidr_blocks = [
+        "23.23.73.1/32",
+        "172.31.16.120/32",
+        "83.240.158.54/32",
+        ]
+      description = ""
+      from_port = 443
+      ipv6_cidr_blocks = []
+      prefix_list_ids = []
+      protocol = "tcp"
+      security_groups = []
+      self = false
+      to_port = 443
+    },
+        {
+      cidr_blocks = [
+        "23.23.73.1/32",
+        "172.31.16.120/32",
+        "83.240.158.54/32",
+        ]
+      description = ""
+      from_port = 3306
+      ipv6_cidr_blocks = []
+      prefix_list_ids = []
+      protocol = "tcp"
+      security_groups = []
+      self = false
+      to_port = 3306
     },
 ]
 }
